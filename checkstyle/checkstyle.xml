@@ -394,7 +394,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
         <!-- No printStackTrace -->
         <module name="Regexp">
             <!-- . matches any character, so we need to escape it and use \. to match dots. -->
-            <property name="format" value="e\.printStackTrace" />
+            <property name="format" value="e\.printStackTrace\(\)" />
             <property name="illegalPattern" value="true" />
         </module>
     </module>
