@@ -144,6 +144,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
 
         <module name="JavadocStyle">
             <property name="severity" value="error" />
+            <property name="checkFirstSentence" value="true"/>
         </module>
 
         <module name="SummaryJavadocCheck">
