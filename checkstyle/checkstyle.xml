@@ -146,6 +146,10 @@ page at http://checkstyle.sourceforge.net/config.html -->
             <property name="severity" value="error" />
         </module>
 
+        <module name="SummaryJavadocCheck">
+            <property name="period" value="."/>
+        </module>
+
         <!--
 
         NAMING CHECKS
