@@ -62,22 +62,29 @@ page at http://checkstyle.sourceforge.net/config.html -->
     </module>
 
     <!--<module name="JavadocPackage">-->
-        <!--&lt;!&ndash; Checks that each Java package has a Javadoc file used for commenting.-->
-          <!--Only allows a package-info.java, not package.html. &ndash;&gt;-->
-        <!--<property name="severity" value="warning"/>-->
+    <!--&lt;!&ndash; Checks that each Java package has a Javadoc file used for commenting.-->
+    <!--Only allows a package-info.java, not package.html. &ndash;&gt;-->
+    <!--<property name="severity" value="warning"/>-->
     <!--</module>-->
 
     <!-- All Java AST specific tests live under TreeWalker module. -->
     <module name="TreeWalker">
 
-        <!-- required for SupressionCommentFilter and SuppressWithNearbyCommentFilter -->
-        <module name="FileContentsHolder" />
+        <!-- required for SuppressionCommentFilter and SuppressWithNearbyCommentFilter -->
+        <!-- module name="FileContentsHolder" /-->
 
         <!--
 
         IMPORT CHECKS
 
         -->
+
+        <module name="SuppressionCommentFilter">
+            <property name="offCommentFormat" value="CHECKSTYLE OFF: (.+)" />
+            <property name="onCommentFormat" value="CHECKSTYLE ON" />
+            <property name="checkFormat" value="Javadoc.*" />
+            <property name="messageFormat" value="$1" />
+        </module>
 
         <module name="AvoidStarImport">
             <property name="allowClassImports" value="false" />
@@ -181,7 +188,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
             <property name="applyToPrivate" value="false" />
             <property name="format" value="^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|FLAG_.*)$" />
             <message key="name.invalidPattern"
-                value="Variable ''{0}'' should be in ALL_CAPS (if it is a constant) or be private (otherwise)." />
+                     value="Variable ''{0}'' should be in ALL_CAPS (if it is a constant) or be private (otherwise)." />
             <property name="severity" value="error" />
         </module>
 
@@ -252,7 +259,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
             -->
 
             <property name="ignorePattern" value="${com.puppycrawl.tools.checkstyle.checks.sizes.LineLength.ignorePattern}"
-                default="^(package .*;\s*)|(import .*;\s*)|( *\* *https?://.*)$" />
+                      default="^(package .*;\s*)|(import .*;\s*)|( *\* *https?://.*)$" />
         </module>
 
         <module name="LeftCurly">
@@ -299,7 +306,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
             some other variants which we don't publicized to promote consistency).
             -->
             <property name="reliefPattern"
-                value="fall through|Fall through|fallthru|Fallthru|falls through|Falls through|fallthrough|Fallthrough|No break|NO break|no break|continue on" />
+                      value="fall through|Fall through|fallthru|Fallthru|falls through|Falls through|fallthrough|Fallthrough|No break|NO break|no break|continue on" />
             <property name="severity" value="error" />
         </module>
 
@@ -332,7 +339,7 @@ page at http://checkstyle.sourceforge.net/config.html -->
                  by regular or curly braces.
             -->
             <property name="tokens"
-                value="ASSIGN, BAND, BAND_ASSIGN, BOR,
+                      value="ASSIGN, BAND, BAND_ASSIGN, BOR,
         BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN,
         EQUAL, GE, GT, LAND, LCURLY, LE, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE,
         LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN,
@@ -402,12 +409,5 @@ page at http://checkstyle.sourceforge.net/config.html -->
     <!--module name="SuppressionFilter">
         <property name="file" value="suppressions.xml"/>
     </module-->
-
-    <module name="SuppressionCommentFilter">
-        <property name="offCommentFormat" value="CHECKSTYLE OFF: (.+)" />
-        <property name="onCommentFormat" value="CHECKSTYLE ON" />
-        <property name="checkFormat" value="Javadoc.*" />
-        <property name="messageFormat" value="$1" />
-    </module>
 
 </module>
