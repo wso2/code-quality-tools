@@ -108,6 +108,8 @@ page at http://checkstyle.sourceforge.net/config.html -->
             <property name="severity" value="error" />
             <property name="ordered" value="true" />
             <property name="groups" value="/([^j]|.[^a]|..[^v]|...[^a])/,/^javax?\./" />
+            <!-- This ensures a separation between import groups -->
+            <property name="separated" value="true"/>
             <!-- This ensures that static imports go to the end. -->
             <property name="option" value="bottom" />
             <property name="tokens" value="STATIC_IMPORT, IMPORT" />
