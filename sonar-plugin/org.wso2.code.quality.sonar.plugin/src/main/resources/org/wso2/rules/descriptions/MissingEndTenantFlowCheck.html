@@ -1,0 +1,28 @@
+<p>endTenantFlow() is missing in the finally block.</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+try // Noncompliant
+{
+    startTenantFlow();
+    int i;
+
+} catch(Exception e) {
+
+} finally {
+
+}
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+try {
+    startTenantFlow();
+    int i;
+
+} catch(Exception e) {
+
+} finally {
+    endTenantFlow();
+}
+</pre>

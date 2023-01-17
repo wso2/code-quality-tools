@@ -1,0 +1,9 @@
+{
+  "title": "startTenantFlow() should be the first line in a try-block. endTenantFlow() should be in a finally block.",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}

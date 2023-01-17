@@ -1,0 +1,34 @@
+<p>startTenantFlow() should be the first line in a try-block. endTenantFlow() should be in a finally block.</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+void foo(){
+    startTenantFlow(); // Noncompliant
+    endTenantFlow(); // Noncompliant
+
+    try {
+        String myString;
+        int myNum;
+        startTenantFlow(); // Noncompliant
+    } catch(Exception e) {
+        endTenantFlow(); // Noncompliant
+
+    } finally {
+
+    }
+}
+
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+try {
+    startTenantFlow();
+    int i;
+
+} catch(Exception e) {
+
+} finally {
+    endTenantFlow();
+}
+</pre>

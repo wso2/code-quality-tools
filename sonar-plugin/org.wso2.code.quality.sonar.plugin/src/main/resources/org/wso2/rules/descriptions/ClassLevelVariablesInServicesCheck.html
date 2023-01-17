@@ -1,0 +1,21 @@
+<p>Do not declare class level variables in authenticators. Use static and final.</p>
+
+<h2>Noncompliant Code Example</h2>
+<pre>
+public class BasicAuthenticator extends AbstractApplicationAuthenticator
+        implements LocalApplicationAuthenticator {
+
+    private int number; // Noncompliant
+
+}
+
+</pre>
+
+<h2>Compliant Solution</h2>
+<pre>
+public class BasicAuthenticator extends AbstractApplicationAuthenticator
+        implements LocalApplicationAuthenticator {
+
+    private static final long serialVersionUID = 123; // Compliant
+}
+</pre>
