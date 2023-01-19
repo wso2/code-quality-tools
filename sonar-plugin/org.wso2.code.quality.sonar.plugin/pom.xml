@@ -104,7 +104,7 @@
                 <configuration>
                     <pluginKey>java-custom</pluginKey>
                     <pluginName>Java Custom Rules</pluginName>
-                    <pluginClass>org.wso2.RulesPlugin</pluginClass>
+                    <pluginClass>org.wso2.code.quality.sonar.plugin.RulesPlugin</pluginClass>
                     <sonarLintSupported>true</sonarLintSupported>
                     <skipDependenciesPackaging>true</skipDependenciesPackaging>
                     <sonarQubeMinVersion>8.9</sonarQubeMinVersion>
