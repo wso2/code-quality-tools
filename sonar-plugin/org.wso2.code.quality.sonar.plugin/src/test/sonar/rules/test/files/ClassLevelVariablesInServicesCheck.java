@@ -55,7 +55,3 @@ class Registry extends SecondClass {
     private int number; // Noncompliant
     private static final long serialVersionUID = 123;
 }
-
-
-
-

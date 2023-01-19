@@ -2,17 +2,17 @@ class myClass {
 
     int num;
 
-    void startTenantFlow(){
+    void startTenantFlow() {
         // Do nothing.
     }
 
-    void endTenantFlow(){
-        // Do nothing.
-    }
-    void foo(){
+    void endTenantFlow() {
         // Do nothing.
     }
 
+    void foo() {
+        // Do nothing.
+    }
 
     void mainMethod() {
 
@@ -25,10 +25,9 @@ class myClass {
             int i;
 
 
-        } catch(Exception e) {
+        } catch (Exception e) {
 
-        } finally
-        {
+        } finally {
         }
 
         try {
@@ -36,12 +35,11 @@ class myClass {
             int myNum;
             startTenantFlow();
 
-        } catch(Exception e) {
+        } catch (Exception e) {
 
         } finally {
             endTenantFlow(); // Compliant
         }
-
 
         try // Noncompliant
         {
@@ -49,14 +47,11 @@ class myClass {
             int myNum;
             startTenantFlow();
 
-        } catch(Exception e) {
+        } catch (Exception e) {
 
-        } finally
-
-        {
+        } finally {
             int i;
         }
 
     }
-
 }
