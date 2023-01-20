@@ -35,7 +35,6 @@ import java.util.List;
  * Custom check to see if class level variables exist in specific services.
  */
 @Rule(key = "ClassLevelVariablesInServicesCheck")
-
 public class ClassLevelVariablesInServicesCheck extends BaseTreeVisitor implements JavaFileScanner {
 
     private JavaFileScannerContext context;
