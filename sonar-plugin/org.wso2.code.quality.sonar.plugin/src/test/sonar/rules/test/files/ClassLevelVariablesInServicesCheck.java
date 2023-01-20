@@ -1,8 +1,7 @@
-import org.wso2.carbon.identity.application.authentication.framework.AbstractApplicationAuthenticator;
-import org.wso2.carbon.identity.application.authentication.framework.ApplicationAuthenticator;
-import org.wso2.carbon.identity.application.authentication.framework.LocalApplicationAuthenticator;
-import org.wso2.carbon.user.api.UserStoreManager;
-
+/**
+ *This file is the sample code against we run our unit test.
+ *It is placed src/test/sonar/rules/test/files in order to not be part of the maven compilation.
+ **/
 interface SecondInterface extends MyInterface {
 
     int number;
