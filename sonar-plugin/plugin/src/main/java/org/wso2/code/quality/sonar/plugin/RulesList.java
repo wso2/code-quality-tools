@@ -47,7 +47,7 @@ public final class RulesList {
     }
 
     /**
-     * These rules are going to target MAIN code only.
+     * Get the rules which are going to target MAIN code only.
      */
     public static List<Class<? extends JavaCheck>> getJavaChecks() {
 
@@ -61,7 +61,7 @@ public final class RulesList {
     }
 
     /**
-     * These rules are going to target TEST code only.
+     * Get the rules which are going to target TEST code only.
      */
     public static List<Class<? extends JavaCheck>> getJavaTestChecks() {
 

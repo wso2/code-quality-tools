@@ -34,11 +34,10 @@ class RulesPluginTest {
   void testName() {
 
     Plugin.Context context = new Plugin.Context(new MockedSonarRuntime());
-
     new RulesPlugin().define(context);
-
     assertThat(context.getExtensions()).hasSize(2);
   }
+
   private static class MockedSonarRuntime implements SonarRuntime {
 
     @Override

@@ -27,6 +27,7 @@ class ClassLevelVariablesInServicesCheckTest {
 
     @Test
     void test() {
+
         CheckVerifier.newVerifier()
                 .onFile("src/test/sonar/rules/test/files/ClassLevelVariablesInServicesCheck.java")
                 .withCheck(new ClassLevelVariablesInServicesCheck())

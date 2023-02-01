@@ -35,7 +35,6 @@ import java.util.Objects;
 public class ClassNameCheck extends BaseTreeVisitor implements JavaFileScanner {
 
     private JavaFileScannerContext context;
-
     private static final String MESSAGE =
             "Don’t use the word ‘Class’ as part of class names or ‘Enum’ as part of enum class names.";
 
@@ -52,7 +51,6 @@ public class ClassNameCheck extends BaseTreeVisitor implements JavaFileScanner {
         String className = Objects.requireNonNull(tree.simpleName()).name();
 
         if (StringUtils.containsIgnoreCase(className, "class") || StringUtils.containsIgnoreCase(className, "enum")) {
-
             context.reportIssue(this, tree, MESSAGE);
         }
         super.visitClass(tree);
