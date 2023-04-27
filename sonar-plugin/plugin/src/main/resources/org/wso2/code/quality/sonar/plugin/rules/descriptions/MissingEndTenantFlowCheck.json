@@ -1,0 +1,9 @@
+{
+  "title": "endTenantFlow() is missing in the finally block.",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}

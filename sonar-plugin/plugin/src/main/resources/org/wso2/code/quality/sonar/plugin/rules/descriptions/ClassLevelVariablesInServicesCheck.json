@@ -1,0 +1,9 @@
+{
+  "title": "Do not declare class level variables in authenticators. Use static and final.",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}

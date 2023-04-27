@@ -1,0 +1,9 @@
+{
+  "title": "Don’t use one letter variable names (except ‘e’ for exceptions, ‘i, j’ in for loops)",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}

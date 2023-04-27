@@ -1,0 +1,9 @@
+{
+  "title": "WSO2 should not be followed by Inc.",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}

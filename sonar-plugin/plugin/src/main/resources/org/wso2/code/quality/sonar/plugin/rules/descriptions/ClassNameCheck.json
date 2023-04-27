@@ -1,0 +1,9 @@
+{
+  "title": "Don’t use the word ‘Class’ as part of class names or ‘Enum’ as part of enum class names.",
+  "type": "Bug",
+  "status": "ready",
+  "tags": [
+    "bugs"
+  ],
+  "defaultSeverity": "Critical"
+}
