@@ -62,8 +62,3 @@ jobs:
 
 ## Comment
 As specified in the workflow file, static analysis will only be run if the comment on the pull request includes the words "run analysis" and is made by the repository owner. It is possible to configure the workflow to allow analysis to be triggered by comments from both owners and collaborators. To do this, simply modify the workflow file to reflect the desired behavior.
-
-# Summary
-This documentation covers the deployment of the Sonar plugin and its integration with GitHub. The plugin can be deployed by copying the modified .jar file to the extensions/plugins directory of the SonarQube instance. The integration with GitHub is achieved through the use of a workflow, which is triggered by a comment on a pull request or code change. The workflow runs static analysis on the code using the Sonar plugin and sends the results to the SonarQube instance. This allows developers to identify and fix issues in the code, improving its quality and security.
-
-

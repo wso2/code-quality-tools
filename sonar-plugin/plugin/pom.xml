@@ -236,7 +236,6 @@
                             <outputDirectory>target/test-jars</outputDirectory>
                         </configuration>
                     </execution>
-
                     <execution>
                         <id>unpack-dependencies</id>
                         <phase>package</phase>
