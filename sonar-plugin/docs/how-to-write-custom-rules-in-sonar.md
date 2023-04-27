@@ -22,7 +22,7 @@ The following example shows how to write a test that points to your previous fil
 ```@Test
 void test() {
 
-   CheckVerifier.newVerifier()
+    CheckVerifier.newVerifier()
            .onFile("src/test/files/MyFirstCustomCheck.java")
            .withCheck(new MyFirstCustomCheck())
            .verifyIssues();
