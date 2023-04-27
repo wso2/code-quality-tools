@@ -14,17 +14,6 @@ In a test file for a custom rule in SonarQube, the "Compliant" and "Noncompliant
 
 Here is an example of how these keywords might be used in a test case which reports an issue if variable name length is less than 2 characters:
 
-```class myClass {
-
-   int a; // Noncompliant
-   boolean b; // Noncompliant
-   char c; // Noncompliant
-
-   float aa; // Compliant
-   int bb; // Compliant
-   boolean cc; // Compliant
-}
-```
 
 ## 2.2 Test class - rule’s unit test
 Unit tests are used to verify the behavior of a custom rule being implemented. The CheckVerifier class, provided by the Java Analyzer rule-testing API, is used to validate the rule implementation and abstract initialization mechanisms of the analyzer. When a rule is verified, the verifier collects lines marked as noncompliant and checks that the rule raises the expected issues and only those issues.
