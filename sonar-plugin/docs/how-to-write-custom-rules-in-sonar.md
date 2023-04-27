@@ -105,9 +105,7 @@ class myClass {
    private static final long serialVersionUID = 123;
 }
 ```
-As you can see in the above code, we are marking variables that are not static
-and final as noncompliant if they are part of a class that contains the
-ApplicationAuthenticator or UserStoreManager in its inheritance chain.
+As you can see in the above code, we are marking variables that are not static and final as noncompliant if they are part of a class that contains the ApplicationAuthenticator or UserStoreManager in its inheritance chain.
 
 ***
 
